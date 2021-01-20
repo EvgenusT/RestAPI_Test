@@ -1,0 +1,24 @@
+# RestAPI_Test
+
+Для проверки работы приложения я запросы формировал в приложении: Postman
+
+POST запрос по адресу: http://localhost:8088/request/1:
+
+{
+    "id" : 1
+}
+
+получал ответ: 
+{
+    "fio": "Test Testov"
+}
+
+Лог файл формируется с помощью log4j: c:\log\logging.log
+
+2021-01-20 15:17:52 INFO  MessageController:29 - Запрос отправлен: {id=1}
+2021-01-20 15:17:52 INFO  MessageController:34 - Ответ получен: {fio=Test Testov}
+2021-01-20 15:19:08 INFO  MessageController:29 - Запрос отправлен: {id=0}
+2021-01-20 15:19:35 INFO  MessageController:29 - Запрос отправлен: {id=1}
+2021-01-20 15:19:35 INFO  MessageController:34 - Ответ получен: {fio=Test Testov}
+
+При условии id не равен 1 - получаем null
